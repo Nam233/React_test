@@ -1,0 +1,269 @@
+#header {
+    height: 12vw;
+    line-height: 12vw;
+    background-color: #00b38a;
+    color: #fff;
+    font-size: 5vw !important;
+    text-align: center;
+    position: relative;
+}
+
+#header .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10.66vw;
+}
+
+.corner {
+    width: 2.4vw;
+    height: 5.33vw;
+    margin: 3.46vw auto 0 auto;
+    background: url(icon2.png) no-repeat -1.5px -20.5px;
+    background-size: 250px 250px;
+    display: inline-block;
+}
+
+#header .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 10.66vw;
+}
+
+#header .right .corner{
+	width: 4.53vw;
+    height: 5.33vw;
+	background-position: -60px -46.5px;
+}
+
+#content {
+    padding-bottom: 18.11vw;
+}
+
+#content .postitle {
+    height: 12.8vw;
+    line-height: 12.8vw;
+    padding: 0 4vw;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+#content .postitle .title {
+    color: #333;
+    margin-bottom: 0;
+    font-size: 4.8vw !important;
+    font-weight: bold;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+
+#content .postitle .collicon {
+    float: right;
+    width: 17.4vw;
+    position: relative;
+    text-align: center;
+    padding: 1.6vw 2.66vw 0 2.66vw;
+    height: 11.46vw;
+}
+
+#content .postitle .notcoll {
+    background: url(icon.png) no-repeat -170px -41px;
+    background-size: 250px 250px;
+}
+
+#content .postitle .icon {
+    display: block;
+    width: 4vw;
+    height: 4vw;
+    margin: 0 auto;
+}
+
+#content .postitle .text {
+    display: block;
+    color: #888;
+    font-size: 2vw !important;
+    line-height: 8vw;
+}
+
+#content .detail {
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 22vw;
+ overflow: hidden;
+    padding: 4vw;
+}
+
+#content .detail .items{
+    margin-top: 2vw;
+}
+
+#content .detail .item {
+    float: left;
+    color: #333;
+    font-size: 4vw !important;
+    position: relative;
+    width: 33.33%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 2.93vw;
+}
+
+#content .detail .icon {
+    display: inline-block;
+    height: 3.46vw;
+    width: 3.46vw;
+    vertical-align: middle;
+}
+
+#content .detail .salary .icon {
+    background: url(icon.png) no-repeat -66px -48px;
+    background-size: 250px 250px;
+}
+
+#content .detail .text {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 1px;
+}
+
+#content .detail .item:nth-child( 3n - 1) {
+    text-align: center;
+}
+
+#content .detail .workaddress .icon {
+    background: url(icon.png) no-repeat -79px -49px;
+    background-size: 250px 250px;
+}
+
+#content .detail .item:nth-child( 3n) {
+    text-align: right;
+}
+
+#content .detail .jobnature .icon {
+    background: url(icon.png) no-repeat -93px -49px;
+    background-size: 250px 250px;
+}
+
+#content .detail .workyear .icon {
+    background: url(icon.png) no-repeat -110.5px -49.5px;
+    background-size: 250px 250px;
+}
+
+#content .detail .item:nth-child( 3n - 1) {
+    text-align: center;
+}
+
+#content .detail .education .icon {
+    background: url(icon.png) no-repeat -127.5px -49px;
+    background-size: 250px 250px;
+}
+
+#content .detail .temptation {
+	float: left;
+    color: #888;
+    word-break: break-all;
+    font-size: 3vw !important;
+}
+
+#content .company {
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 17vw;
+    padding: 4vw;
+}
+
+#content .company .logo {
+    width: 16vw;
+    height: 16vw;
+    float: left;
+}
+
+#content .company .desc {
+    margin-left: 18.66vw;
+    min-height: 2.66vw;
+}
+
+#content .company .dleft {
+    float: left;
+    min-height: 2.66vw;
+    min-width: 2.66vw;
+    max-width: 80%;
+}
+
+#content .company .dleft .title {
+    color: #00b38a;
+    font-size: 5vw !important;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 1.33vw;
+}
+
+#content .company .dleft .info {
+    color: #888;
+    font-size: 3.5vw !important;
+}
+
+
+
+#content .company .dright {
+    float: right;
+    display: inline-block;
+    width: 6.13vw;
+    height: 7.73vw;
+    background: url(icon.png) no-repeat -222.5px -3.5px;
+    background-size: 250px 250px;
+    margin-top: 2.66vw;
+}
+
+#content .positiondesc .content {
+    word-break: break-all;
+    padding: 4vw;
+    color: #555;
+    font-size: 3vw !important;
+    line-height: 5.86vw;
+}
+
+#content .positioneval .eval-title {
+    height: 9.6vw;
+    line-height: 9.6vw;
+    padding-left: 4vw;
+    color: #00b38a;
+    font-size: 4vw !important;
+    background-color: #d2f9f0;
+}
+
+#content .positioneval .list-item {
+    padding: 4vw;
+    padding-bottom: 3.73vw;
+    border-bottom: none;
+    font-size: 3vw !important;
+    color: #666;
+}
+
+#content .fix_btn_group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 11.73vw;
+    width: 92%;
+    padding: 3.2vw 4%;
+    line-height: 11.73vw;
+    background-color: rgba(255,255,255,0.8);
+}
+
+#content .deliver {
+    width: 100%;
+    background-color: #00b38a;
+    color: #fff;
+    font-size: 5vw !important;
+    text-align: center;
+    border-radius: 3px;
+}
