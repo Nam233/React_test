@@ -66,3 +66,54 @@ header {
   background-color: #E7F3F0;
   color: #09B58E !important;
 }
+/*搜索页面样式*/
+.search_title{
+  height: 12vw;
+  display: flex;
+  border-bottom: 1px solid #E8E8E8;
+}
+.search_title .search_city{
+  width: 25vw;
+  height: 100%;
+  text-align: center;
+  line-height: 12vw;
+  font-size: 3.98vw;
+  background: url(icon.png) no-repeat 18.26vw 3.66vw;
+  border-right:1px solid #E8E8E8;
+}
+.search_title  .search_input{
+  flex: 1;
+  height: 100%;
+  outline: none !important;
+  border:none;
+}
+.search_title  .search_btn{
+  width: 10vw;
+  outline: none;
+  border:none;
+  background: url(icon.png) no-repeat -6.92vw 0.77vw;
+}
+/*搜索匹配样式*/
+.search_ul{
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #E8E8E8;
+  overflow: hidden;
+}
+.search_ul>p{
+  border-bottom: 1px solid #E8E8E8;
+  color:#888888;
+  padding-left: 5vw;
+  font-size: 3.22vw;
+  line-height: 7vw;
+  height: 7vw;
+}
+.search_ul>li{
+  width: 33vw;
+  font-size: 3.98vw;
+  float: left;
+  color: black;
+  height: 16vw;
+  line-height: 16vw;
+  text-align: center;
+}
