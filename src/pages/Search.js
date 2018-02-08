@@ -33,7 +33,13 @@ class Search extends Component{
 		var uls = this.state.list.map((elem, index)=> {
 			return <Ul item={elem} key = {index} change = {this.change_city}/>
 		})
-		var his = this.state.history.map((elem, index)=> {
+		var his_all = [];
+		for(let i = 0;i < 5;i++){
+			if(this.state.history[i]){
+				his_all.push(this.state.history[i])
+			}
+		}
+		var his = his_all.map((elem, index)=> {
 			return <p onClick={this.click_history} className ="search_history" key={index}>{elem}<span onClick={this.del_history} data-id={elem}>X</span></p>
 		})
 		return (
