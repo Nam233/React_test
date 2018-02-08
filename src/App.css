@@ -117,3 +117,14 @@ header {
   line-height: 16vw;
   text-align: center;
 }
+/*搜索记录*/
+.search_history{
+  background-color: #FAFAFA;
+  border-bottom:1px solid #e8e8e8;
+  padding:3vw 4vw;
+  color: #666;
+  margin-bottom: 0;
+}
+.search_history>span{
+  float: right;
+}

@@ -11,7 +11,8 @@ class Search extends Component{
 			city:"全国"	,
 			info:"",
 			job_list:[],
-			list_show:[]
+			list_show:[],
+			history:localStorage.search?JSON.parse(localStorage.search):[]
 		}
 		axios.post('/api/listLoad', {l:"你好"})
 		  .then((res)=> {
@@ -24,22 +25,70 @@ class Search extends Component{
 		this.change_city = this.change_city.bind(this);
 		this.handleInfo = this.handleInfo.bind(this);
 		this.search = this.search.bind(this);
+		this.search_click = this.search_click.bind(this);
+		this.click_history = this.click_history.bind(this);
+		this.del_history = this.del_history.bind(this);
 	}
 	render(){
 		var uls = this.state.list.map((elem, index)=> {
 			return <Ul item={elem} key = {index} change = {this.change_city}/>
+		})
+		var his = this.state.history.map((elem, index)=> {
+			return <p onClick={this.click_history} className ="search_history" key={index}>{elem}<span onClick={this.del_history} data-id={elem}>X</span></p>
 		})
 		return (
 			 <div>
                 <div className = "search_title">
                 	<div className = "search_city" onClick = {(e)=>this.handleShow(e)}>{this.state.city}</div>
                 	<input className="search_input form-control" value={this.state.info} onChange={this.handleInfo} type = "text" placeholder = "搜索职位或公司"></input>
-                	<button className = "search_btn " onClick = {this.search}></button>
+                	<button className = "search_btn " onClick = {this.search_click}></button>
                 </div>
                 {this.state.show?uls:""}
+                {this.state.list_show.length == 0?his:""}
                 {this.state.list_show?<div><JobList list = {this.state.list_show}/></div>:""}
              </div>
 			)   
+	}/*删除历史记录*/
+	del_history(e){
+		var storage=window.localStorage;
+		var history = storage.search?JSON.parse(storage.search):[];
+		history.forEach((elem,index)=>{
+			if(elem == e.target.getAttribute("data-id")){
+				history.splice(index,1);
+			}
+		});
+		storage.search = JSON.stringify(history);
+		this.setState({
+			history:JSON.parse(storage.search)
+		});
+	}
+	/*点击历史记录查询*/
+	click_history(e){
+		/*截取有效搜索内容*/
+		this.setState({
+			info:e.target.innerText.slice(0,-1)
+		},()=>{
+			this.search_click();
+		});
+	}
+	/*历史记录缓存*/
+	search_click(){
+		this.search();
+		var storage=window.localStorage;
+		var history = storage.search?JSON.parse(storage.search):[];
+		history.forEach((elem,index)=>{
+			if(elem == this.state.info.trim()){
+				history.splice(index,1);
+			}
+		})
+		if(this.state.info!=""){
+			history.unshift(this.state.info.trim());
+		}
+		storage.search = JSON.stringify(history) ;
+		this.setState({
+			history:JSON.parse(storage.search)
+		});
+		
 	}
 	/*模糊查找 历史记录保存*/
 	search(){
@@ -47,7 +96,7 @@ class Search extends Component{
 			show:false
 		})
 		var listByCity = []//匹配城市
-		this.state.job_list.map((elem, index)=> {
+		this.state.job_list.map((elem, index)=>{
 			if(elem.city == this.state.city||this.state.city == "全国"){
 				listByCity.push(elem) ;
 			}	
